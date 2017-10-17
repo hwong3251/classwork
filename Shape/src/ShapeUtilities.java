@@ -12,7 +12,7 @@ public class ShapeUtilities {
 			case 1:
 				return new Rectangle(r.nextInt(100)+1,r.nextInt(100)+1);
 			default:
-				return 
+				return getRandomShape();
 		}
 	}
 	public static double sumPeri(Shape[]shapeArr)
