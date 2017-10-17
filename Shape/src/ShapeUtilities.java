@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class ShapeUtilities {
 	public static Shape getRandomShape()
@@ -9,15 +10,15 @@ public class ShapeUtilities {
 			case 0:
 				return new Circle(r.nextInt(100)+1);
 			case 1:
-				return
+				return new Rectangle(r.nextInt(100)+1,r.nextInt(100)+1);
 			default:
-				return
+				return 
 		}
 	}
 	public static double sumPeri(Shape[]shapeArr)
 	{
 		double x = 0;
-		for(int i = 0; i < shapeArr.length(); i++)
+		for(int i = 0; i < shapeArr.length; i++)
 		{
 			x = shapeArr[i].perimeter()+x;
 		}
@@ -26,7 +27,7 @@ public class ShapeUtilities {
 	public static double sumArea(Shape[]shapeArr)
 	{
 		double x = 0;
-		for(int i = 0; i < shapeArr.length(); i++)
+		for(int i = 0; i < shapeArr.length; i++)
 		{
 			x = shapeArr[i].area()+x;
 		}
