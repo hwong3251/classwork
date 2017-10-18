@@ -8,11 +8,13 @@ public class ShapeUtilities {
 		switch(x)
 		{
 			case 0:
-				return new Circle(r.nextInt(100)+1);
+				return new Circle(r.nextInt(100));
 			case 1:
-				return new Rectangle(r.nextInt(100)+1,r.nextInt(100)+1);
+				return new Rectangle(r.nextInt(50),r.nextInt(50));
+			case 2:
+				return new Square(r.nextInt(50));
 			default:
-				return getRandomShape();
+				return new Circle(r.nextInt(100));
 		}
 	}
 	public static double sumPeri(Shape[]shapeArr)
