@@ -16,4 +16,9 @@ public class Rectangle implements Shape{
 	{
 		return length*width;
 	}
+	@Override
+	public String toString() {
+		System.out.println("RECTANGLE "+ "Width:" + width + "\t" + "Length:" + length + "\t"+ "Area:" + this.area() + "\t");
+		return "";
+	}
 }

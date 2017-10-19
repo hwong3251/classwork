@@ -17,7 +17,7 @@ public class Circle implements Shape{
 	}
 	@Override
 	public String toString() {
-		System.out.println("radius: "+radius+"\t"+"Circumference: "+ this.perimeter() + "Area: " + this.area());
+		System.out.println("CIRCLE "+ "Radius:" + radius + "\t" + "Circumference:"+ this.perimeter() + "\t" + "Area:" + this.area() + "\t");
 		return "";
 	}
 }

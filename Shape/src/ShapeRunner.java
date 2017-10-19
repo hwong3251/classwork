@@ -6,7 +6,7 @@ public class ShapeRunner {
 		Shape rectangle1 = new Rectangle(10, 4);
 		Shape square1 = new Square(10);
 
-		System.out.println("First test out the hard coded shape arraay.\n\n");
+		System.out.println("First test out the hard coded shape array.\n\n");
 		Shape[] shapeArr = { circle1, rectangle1, square1 };
 
 		for (Shape shape : shapeArr) {
@@ -17,7 +17,7 @@ public class ShapeRunner {
 		System.out.println("Total Perimeter: " + ShapeUtilities.sumPeri(shapeArr)); // 86.84
 		System.out.println("\nDid the three shapes above add up to the total printed here?\n");
 
-		System.out.println("\n\n Now testing the random array.\n");
+		System.out.println("\n\nNow testing the random array.\n");
 
 		shapeArr = new Shape[10];
 
