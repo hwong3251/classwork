@@ -1,9 +1,11 @@
 package runner;
 import character.Player;
-import character.Character;
+
 public class GameRunner {
-	public static void Main(String[]args)
+	
+	public static void main(String[]args)
 	{
-		Player.getName();
+		Player.getPlayerName();
 	}
+	
 }

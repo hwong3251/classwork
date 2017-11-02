@@ -3,18 +3,21 @@ import utilities.Utilities;
 
 public class Player extends Character implements CharacterInterface{
 	
-	private String name, line, description;
+	private static String name;
+	private String line;
+	private String description;
 	private int xlocation, ylocation, HP, EXP;
 	
 	public Player(String name, String line, String description, int xlocation, int ylocation, int HP, int EXP)
 	{
 		super(name, line, description, xlocation, ylocation, HP, EXP);
 	}
-	public String getPlayerName()
+	public static String getPlayerName()
 	{
 		System.out.println("Hi. My name is Flowey. What is your name?");
-		System.out.println("Nice to meet you!" + name);
 		name = Utilities.getInput();
+		System.out.println("Nice to meet you!" + name);
+
 		return Player.getName();
 	}
 	public String pickStageLine() {
