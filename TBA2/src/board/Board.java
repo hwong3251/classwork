@@ -1,9 +1,12 @@
 package board;
 
+import room.EmptyRoom;
 import room.Room;
 
 public class Board {
+	
     private static Room[][] map;
+    
     public Board(Room[][] map)
     {
         this.map = map;
@@ -15,16 +18,18 @@ public class Board {
         {
             for (Room room : row)
             {
-                room.print();
+                room.print(false);
             }
-            System.out.println();
+            System.out.println("[ ]");
         }
     }
-    public void setMap(Room[][] map) {
-        this.map = map;
+
+
+	public static void setMap(Room[][] map) {
+        Board.map = map;
     }
     public Room[][] getMap() {
         return map;
     }
-
+    
 }

@@ -29,9 +29,6 @@ public class Player extends Character implements CharacterInterface{
 	private String[]dArr = {"tired","hungry","determined","lost"};
 	private String[]lArr = {"attack", "spare", "stay", "compliment", "flee","item","check","collect","follow","..."};
 	
-	public String print() {
-		return "[ X ]";
-	}
 
 
 }
