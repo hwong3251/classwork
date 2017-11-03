@@ -1,37 +1,37 @@
 package character;
+import room.Room;
 import utilities.Utilities;
 
 public class Player extends Character implements CharacterInterface{
 	
-	private static String name;
-	private String line;
-	private String description;
-	private int xlocation, ylocation, HP, EXP;
-	
-	public Player(String name, String line, String description, int xlocation, int ylocation, int HP, int EXP)
+	public static String name;
+	private String line, description;
+	private int HP, AT, DF, EXP;
+	private Room room;
+	private int LV;
+	/**
+	 * @param LV : LOVE. When LV increases, maximum HP, AT, DF will increase.
+	 */
+	public Player(String name, String line, String description, Room room, int HP, int AT, int DF, int EXP, int LV)
 	{
-		super(name, line, description, xlocation, ylocation, HP, EXP);
+		super(name, line, description, room, HP, AT, DF, EXP);
+		this.LV = LV;
 	}
-	public static String getPlayerName()
-	{
-		System.out.println("Hi. My name is Flowey. What is your name?");
-		name = Utilities.getInput();
-		System.out.println("Nice to meet you!" + name);
-
-		return Player.getName();
+	public String getStageLine() {
+		return line;
 	}
-	public String pickStageLine() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public int changexLocation() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	public int changeyLocation() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	
+	public static void setPlayerName(String name) {
+		Player.name = name;
+	}
+	
+
+	private String[]dArr = {"tired","hungry","determined","lost"};
+	private String[]lArr = {"attack", "spare", "stay", "compliment", "flee","item","check","collect","follow","..."};
+	
+	public String print() {
+		return "[ X ]";
+	}
+
+
 }
