@@ -6,10 +6,14 @@ import item.Item;
 import java.util.Arrays;
 
 public abstract class Room {
-
-    private boolean[] doors;
     private Character[] occupants;
     private Item[] items;
+    
+    public Room(Character[]occupants, Item[]items)
+    {
+    	this.occupants = occupants;
+    	this.items = items;
+    }
     
     public Character[] getOccupants() 
     {
@@ -21,18 +25,8 @@ public abstract class Room {
         this.occupants = occupants;
     }
     
-    public void addOccupant(Character p)
-    {
-        this.occupants = Arrays.copyOf(this.occupants,this.occupants.length+1);
-        this.occupants[this.occupants.length-1] = p;
-      //  p.setRoom(this);
-    }
-    
-    // public boolean[] getDoors()
-    //{
-    //	return doors;
-    //}
     public abstract void print();
+    
     public void print(boolean occupied)
     {
     	if(occupied)

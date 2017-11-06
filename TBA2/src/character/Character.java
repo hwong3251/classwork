@@ -1,11 +1,14 @@
 package character;
 
+import java.util.Scanner;
+
 import room.Room;
 
 public abstract class Character {
 	public static String name, line, description;
 	private int HP, AT, DF, EXP;
 	private Room room;
+	private int x, y;
 	
 	/** 
 	 * @param name : name of character. Player can create their own name.
@@ -14,27 +17,16 @@ public abstract class Character {
 	 * @param xlocation : x location of character in the board
 	 * @param ylocation : y location of character in the board
 	 * @param HP : Hit Point, 0 HP = game over / dead
-	 * @param AT : Attack. Strength of fight option in combat(player)
-	 * @param DF : Defense. Reduces amount of HP you lose
-	 * @param EXP: EX Points. Gained by defeating enemies(player)/ Amount of EXP a character has. 
+	 * @param AT : Attack. Strength of fight option in combat(player) 
+	 * @param x y : position of player
 	 */
-	public Character(String name, String line, String description, Room room, int HP, int AT, int DF, int EXP)
+	public Character(String name, String line, String description,int HP, int AT)
 	{
 		this.name = name;
 		this.line = line;
 		this.description = description;
-		this.room = room;
 		this.HP = HP;
 		this.AT = AT;
-		this.DF = DF;
-		this.EXP = EXP;
-	}
-	public Room getRoom() {
-		return this.room;
-	}
 
-	public void setRoom(Room room) 
-	{
-		this.room = room;
 	}
 }
