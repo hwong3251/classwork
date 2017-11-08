@@ -19,7 +19,7 @@ public class Student extends Person{
 	}
 	public Student(String firstName, String familyName, int age, double GPA)
 	{
-		super(firstName, familyName, age, GPA);
+		super(firstName, familyName, age);
 		this.GPA = GPA;
 	}
 	

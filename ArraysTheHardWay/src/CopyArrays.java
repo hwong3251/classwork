@@ -9,6 +9,10 @@ public class CopyArrays {
 		}
 		int[]copy = copyArray(intArray);
 		copy[copy.length-1] = -7;
+		
+		System.out.println("Array 1:");
+		printArray(intArray);
+		
 		System.out.println("Copy of Array1:");
 		printArray(copy);
 		

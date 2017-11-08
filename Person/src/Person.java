@@ -7,6 +7,7 @@ public abstract class Person {
 	public int CalculateAge;
 	public abstract String greeting();
 	
+	public Person(String firstName, String familyName, String birthplace, String birthdate, )
 	//Getters
 	public String getFirstName()
 	{

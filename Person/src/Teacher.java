@@ -6,9 +6,11 @@ public class Teacher extends Person{
 	private String prefix;
 	private Student[][]Classes;
 	private static String[] greetings = {"HI", "Hello"};
-	public Teacher(String firstName, String familyName, int age)
+	public Teacher(String firstName, String familyName, int age, String subject, String prefix)
 	{
-		super(firstName, familyName, age, subject);
+		super(firstName, familyName, age);
+		this.subject = subject;
+		this.prefix = prefix;
 	}
 	public String greeting()
 	{
