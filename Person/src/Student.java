@@ -22,5 +22,11 @@ public class Student extends Person{
 		super(firstName, familyName, age);
 		this.GPA = GPA;
 	}
+
+	@Override
+	public String greeting() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
