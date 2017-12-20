@@ -12,9 +12,10 @@ public class GameRunner {
 	{
 		Player player1 = new Player(0 , 0);
 		Boolean GameOn = true;
+		IntroMap test1= new IntroMap();
 		while(GameOn)
 		{
-			board.IntroMap.printMap();
+			test1.printMap();
 			player1.chooseMove();
 		}
 	}

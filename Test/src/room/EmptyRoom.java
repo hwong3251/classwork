@@ -8,6 +8,7 @@ public class EmptyRoom extends Room{
 	
 	public EmptyRoom(Character[] occupants, boolean occupied) {
 		super(occupants, false);
+		this.occupied=occupied;
 	}
 	
 	public void print() 
@@ -16,7 +17,11 @@ public class EmptyRoom extends Room{
 		{
 			System.out.print("[x]");
 		}
-		System.out.print("[ ]");
+		else
+		{
+			System.out.print("[ ]");
+		}
+
 	}
 
 	@Override

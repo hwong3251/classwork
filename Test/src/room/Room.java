@@ -13,7 +13,6 @@ public abstract class Room {
     	this.occupants = occupants;
     	this.occupied = occupied;
     }
-
     
     public abstract void print();
 
