@@ -1,7 +1,9 @@
 package board;
 
+import character.Flowey;
 import character.Player;
 import room.EmptyRoom;
+import room.IntroFlowey;
 import room.Room;
 import runner.GameRunner;
 
@@ -15,11 +17,11 @@ public class IntroMap extends Board{
 	public EmptyRoom ER5 = new EmptyRoom(null, false);
 	public EmptyRoom ER6 = new EmptyRoom(null, false);
 	public EmptyRoom ER7 = new EmptyRoom(null, false);
-	public EmptyRoom ER8 = new EmptyRoom(null, false);
+	public IntroFlowey IF1 = new IntroFlowey(null, true);
 	
 	public Room[][]map = { {ER0,ER1,ER2},
 						   {ER3,ER4,ER5},
-						   {ER6,ER7,ER8}	};
+						   {ER6,IF1,ER7}	};
 	
 	private int boardSize = 3;
 	
@@ -41,6 +43,12 @@ public class IntroMap extends Board{
 				}
 			}
 		}
+		try {
+			FloweyPlayerEncounter();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void printMap() 
@@ -61,5 +69,27 @@ public class IntroMap extends Board{
 		return this.boardSize;
 	}
 
+	public void FloweyPlayerEncounter() throws InterruptedException
+	{
+		if(Player.getX()==2 && Player.getY()==1)
+		{
+			System.out.println("You see a flower,.............. it is talking to you!");
+			Flowey.createPlayerName();
+		}
+	}
 	
+	//////////////////////////////////////////INTRO SCENE///////////////////////////////////////////////
+	public static void introduction() throws InterruptedException
+	{
+		int sleepTime = 1000;
+		System.out.println("Long ago, two races ruled over Earth: HUMANS and MONSTERS");
+		Thread.sleep(sleepTime);
+		System.out.println("One day, war broke out between the two races.");
+		Thread.sleep(sleepTime);
+		System.out.println("After a long battle, the humans were victorious");
+		Thread.sleep(sleepTime);
+		System.out.println("They sealed the monsters underground with a magic spell");
+		Thread.sleep(sleepTime);
+		System.out.println("Many years later... \n ");
+	}
 }

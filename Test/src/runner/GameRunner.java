@@ -8,7 +8,7 @@ import room.Room;
 public class GameRunner {
 
 	public static boolean GameOn = true;
-	public static Player player = new Player(0 , 0);
+	public static Player player = new Player(0 , 0, null);
 	public static IntroMap test1= new IntroMap();
 	
 	public static Board currentMap = test1;
@@ -17,6 +17,12 @@ public class GameRunner {
 	{
 		Boolean GameOn = true;
 		
+		/*
+		if(currentMap == test1)
+		{
+			test1.introduction();
+		}
+		*/
 		while(GameOn)
 		{
 			currentMap.updateMap();

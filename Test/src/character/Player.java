@@ -9,13 +9,15 @@ public class Player extends Character{
 	
 	public static int x;
 	public static int y;
+	public static String name;
 	/**
 	 * @param x y: position of player.
 	 */
-	public Player(int x , int y)
+	public Player(int x , int y, String name)
 	{
 		this.x = x;
 		this.y = y;
+		this.name = name;
 	}
 	
 	//set limit to where player can go in the map. 
@@ -23,17 +25,17 @@ public class Player extends Character{
 	{
 		if(y > GameRunner.currentMap.getBoardSize()-1)
 		{
-			System.out.print("!! You cannot move this way. !!\\n");
+			System.out.print("!! You cannot move this way. !!\n");
 			y -=1;	
 		}
         if(y < 0)
         {
-        	System.out.print("!! You cannot move this way. !!\\n");
+        	System.out.print("!! You cannot move this way. !!\n");
       		y +=1;
         }
         if(x > GameRunner.currentMap.getBoardSize()-1)
         {
-        	System.out.print("!! You cannot move this way. !!\\n"); 
+        	System.out.print("!! You cannot move this way. !!\n"); 
         	x -=1;
         }
         if(x < 0)
@@ -72,6 +74,12 @@ public class Player extends Character{
 		moveLimit();
 	}
 	
+	//set Player name
+	public static void setPlayerName(String name) {
+		Player.name = name;
+	}
+	
+	//getter
 	public static int getX()
 	{
 		return x;
@@ -79,6 +87,10 @@ public class Player extends Character{
 	public static int getY()
 	{
 		return y;
+	}
+	public static String getName()
+	{
+		return name;
 	}
 	
 }
