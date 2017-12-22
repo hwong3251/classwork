@@ -1,14 +1,15 @@
 package room;
-
+import character.Player;
+import runner.GameRunner;
 
 public class EmptyRoom extends Room{
 	
 	private boolean occupied = false;
-	private Character occupants ;
+	private Player occupants ;
 	
-	public EmptyRoom(Character[] occupants, boolean occupied) {
-		super(occupants, false);
-		this.occupied=occupied;
+	public EmptyRoom(Player occupants, boolean occupied) {
+		this.occupants = occupants;
+		this.occupied = occupied;
 	}
 	
 	public void print() 
@@ -25,9 +26,15 @@ public class EmptyRoom extends Room{
 	}
 
 	@Override
-	public void addOccupants(Character x) {
-		occupants = x;
+	public void addOccupants() {
+		occupants = GameRunner.player;
 		occupied = true;
+	}
+
+	@Override
+	public void removeOccupants() {
+		occupants = null;
+		occupied = false;
 	}
 
 }

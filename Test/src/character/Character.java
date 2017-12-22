@@ -17,9 +17,4 @@ public abstract class Character {
 	 * @param AT : Attack. Strength of fight option in combat(player) 
 	 * @param x y : position of player
 	 */
-	public Character(int x, int y)
-	{
-		this.x = x;
-		this.y = y;
-	}
 }

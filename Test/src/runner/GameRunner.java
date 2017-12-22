@@ -8,15 +8,20 @@ import room.Room;
 public class GameRunner {
 
 	public static boolean GameOn = true;
+	public static Player player = new Player(0 , 0);
+	public static IntroMap test1= new IntroMap();
+	
+	public static Board currentMap = test1;
+	
 	public static void main(String[]args) throws InterruptedException
 	{
-		Player player1 = new Player(0 , 0);
 		Boolean GameOn = true;
-		IntroMap test1= new IntroMap();
+		
 		while(GameOn)
 		{
-			test1.printMap();
-			player1.chooseMove();
+			currentMap.updateMap();
+			currentMap.printMap();
+			player.chooseMove();
 		}
 	}
 

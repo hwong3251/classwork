@@ -5,10 +5,11 @@ public abstract class Board {
 	
     private static Room[][] map;
     private Boolean isOccupied; 
-	public static void setMap(Room[][] map) 
-	{
-        Board.map = map;
-    }
-	public abstract void printMap();
+    private int boardSize;
     
+	public abstract void printMap();
+    public abstract void updateMap();
+	public abstract int getBoardSize();
+    
+   // public abstract void getboardSize();
 }

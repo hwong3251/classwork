@@ -6,16 +6,12 @@ import java.util.Arrays;
 
 public abstract class Room {
 	private boolean occupied;
-    private Character[] occupants ;
-    
-    public Room(Character[]occupants, boolean occupied)
-    {
-    	this.occupants = occupants;
-    	this.occupied = occupied;
-    }
+    private Player occupants ;
     
     public abstract void print();
 
-	public abstract void addOccupants(Character x);
+	public abstract void addOccupants();
+	
+	public abstract void removeOccupants();
     
 }
